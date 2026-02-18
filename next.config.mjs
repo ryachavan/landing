@@ -1,8 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  typescript: {
-    ignoreBuildErrors: true,
-  }
+  async redirects() {
+    return [
+      {
+        source: "/portfolio",
+        destination: "https://ryachavan.github.io/Portfolio-Website/",
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig
